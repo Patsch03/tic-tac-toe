@@ -1,0 +1,48 @@
+.gameBoard{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 100px, auto;
+}
+
+.gameBoard .boxesCol1{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: black;
+    float: left;
+    margin: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+    
+}
+
+.gameBoard .boxesCol2{
+    position: relative;
+    right: -250px;
+    top: -690px;
+    width: 200px;
+    height: 200px;
+    background: black;
+    float: left;
+    margin: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+    
+}
+.gameBoard .boxesCol3{
+    position: relative;
+    right: -500px;
+    top: -1380px;
+    width: 200px;
+    height: 200px;
+    background: black;
+    float: left;
+    margin: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+    
+}
