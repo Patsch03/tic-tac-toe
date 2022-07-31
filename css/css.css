@@ -15,6 +15,123 @@
 
 }
 
+#x01{
+    font-size: 200px;
+    position: absolute;
+    left: 60px;
+    top: 10px;
+}
+
+#o01{
+    font-size: 200px;
+    position: absolute;
+    left: 60px;
+    top: 10px;
+}
+
+
+
+#x02{
+    font-size: 200px;
+    position: absolute;
+    left: 60px;
+    top: 235px;
+}
+
+#o02{
+    font-size: 200px;
+    position: absolute;
+    left: 60px;
+    top: 235px;
+}
+
+
+#x10{
+    font-size: 200px;
+    position: absolute;
+    left: 320px;
+    top: -225px;
+}
+
+#o10{
+    font-size: 200px;
+    position: absolute;
+    left: 320px;
+    top: -225px;
+}
+
+#x20{
+    font-size: 200px;
+    position: absolute;
+    left: 320px;
+    top: 7px;
+}
+
+#o20{
+    font-size: 200px;
+    position: absolute;
+    left: 320px;
+    top: 7px;
+}
+
+#x30{
+    font-size: 200px;
+    position: absolute;
+    left: 320px;
+    top: 235px;
+}
+
+#o30{
+    font-size: 200px;
+    position: absolute;
+    left: 320px;
+    top: 235px;
+}
+
+#xC30{
+    font-size: 200px;
+    position: absolute;
+    left: 570px;
+    top: -225px;
+}
+
+#oC30{
+    font-size: 200px;
+    position: absolute;
+    left: 570px;
+    top: -225px;
+}
+
+#xC31{
+    font-size: 200px;
+    position: absolute;
+    left: 570px;
+    top: 5px;
+}
+
+#oC31{
+    font-size: 200px;
+    position: absolute;
+    left: 570px;
+    top: 5px;
+}
+
+#xC32{
+    font-size: 200px;
+    position: absolute;
+    left: 570px;
+    top: 235px;
+}
+
+#oC32{
+    font-size: 200px;
+    position: absolute;
+    left: 570px;
+    top: 235px;
+}
+
+
+
 
 .gameBoard{
     position: relative;
