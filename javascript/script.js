@@ -1,3 +1,6 @@
+
+
+
 let playerTurn = 1;
 
 
@@ -7,6 +10,10 @@ let gameBoard = [
     [0, 0, 0]
 ];
 
+
+      
+
+
 function addXorO(boardPosition){ // 2d arrray position input
     if(playerTurn == 1){
         //add X
@@ -15,9 +22,23 @@ function addXorO(boardPosition){ // 2d arrray position input
     }
 }
 
+
+
+
+
 let boxClickCol1  = document.getElementsByClassName("boxesCol1");
 let boxClickCol2 = document.getElementsByClassName("boxesCol2");
 let boxClickCol3 = document.getElementsByClassName("boxesCol3");
+
+
+
+
+
+
+
+
+
+
 
 function isBoardFull(){
     let isBoardFull = true;
@@ -32,6 +53,14 @@ function isBoardFull(){
 }
 
 
+
+
+
+
+
+
+
+
 function resetGame(){
     gameBoard = [
         [0,0,0],
@@ -43,6 +72,15 @@ function resetGame(){
 }
 
 
+
+
+document.getElementById("x00").style.display = "none";
+document.getElementById("o00").style.display = "none";
+
+
+
+
+
 function whoWon(position){
     if(position == 1){
         alert("X's won");
@@ -52,6 +90,28 @@ function whoWon(position){
     }
 
 }
+
+
+
+
+/*
+function createX(eyeD){
+    let xImg = document.createElement("img");
+    xImg.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Letter_x.svg/1200px-Letter_x.svg.png";
+    let block = document.getElementById(eyeD);
+    block.appendChild(xImg);
+    xImg.height = 250;
+    xImg.style.position = "absolute";
+    xImg.style.left = "100";
+
+}
+*/
+
+
+
+
+
+
 
 // logic for checking if the game is won
 // need to replace the alert with reseting the game board most likely going to add a reset function that happens when button is clicked 
@@ -104,11 +164,17 @@ function gameRun(){
                         console.log(gameBoard);
                         playerTurn = 2;
                         checkWin();
+                        if(i == 0){
+                            document.getElementById("x00").style.display = "block"; // univisibles everything
+                        }
                     }else if(playerTurn == 2){
                         gameBoard[i][0] = 2;
                         console.log(gameBoard);
                         playerTurn = 1;
                         checkWin();
+                        if(i == 0){
+                            document.getElementById("o00").style.display = "block";
+                        }
                     }
                 }else{
                     console.log("There is already a value here");
@@ -174,6 +240,8 @@ function gameRun(){
     });
 
 
+
+    //console.log(boxClickCol1[0].getBoundingClientRect());
 
 
 gameRun();
