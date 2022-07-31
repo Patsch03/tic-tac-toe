@@ -12,28 +12,9 @@ let gameBoard = [
       
 
 
-function addXorO(boardPosition){ // 2d arrray position input
-    if(playerTurn == 1){
-        //add X
-    }else if(playerTurn == 2){
-        //add O
-    }
-}
-
-
-
-
-
 let boxClickCol1  = document.getElementsByClassName("boxesCol1");
 let boxClickCol2 = document.getElementsByClassName("boxesCol2");
 let boxClickCol3 = document.getElementsByClassName("boxesCol3");
-
-
-
-
-
-
-
 
 
 
@@ -49,6 +30,9 @@ function isBoardFull(){
     }
     return isBoardFull;
 }
+
+
+
 
 function resetGame(){
     gameBoard = [
@@ -274,7 +258,7 @@ function gameRun(){
     let resetButton = document.getElementById("reset");
     resetButton.addEventListener("click", function(){
         resetGame();
-        alert("Game has been reset");
+        //alert("Game has been reset");
     });
 
 
