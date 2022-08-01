@@ -129,6 +129,9 @@ function checkWin(){
     }else if(gameBoard[0][2] == gameBoard[1][1] && gameBoard[1][1] == gameBoard[2][2] && gameBoard[0][2] != 0){
         alert("Game is over!");
         whoWon(gameBoard[0][2]);
+    }else if(gameBoard[0][2] == gameBoard[1][1] && gameBoard[1][1] == gameBoard[2][0] && gameBoard[0][2] != 0){
+        alert("Game is over!");
+        whoWon(gameBoard[0][2]);
     }else if(isBoardFull()){
         alert("Game has resulted in a tie");
         
