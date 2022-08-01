@@ -1,7 +1,7 @@
 
 let playerTurn = 1;
 
-
+//empty board at start of game
 let gameBoard = [
     [0, 0, 0],
     [0, 0, 0],
@@ -11,14 +11,14 @@ let gameBoard = [
 
       
 
-
+//accesses the columns
 let boxClickCol1  = document.getElementsByClassName("boxesCol1");
 let boxClickCol2 = document.getElementsByClassName("boxesCol2");
 let boxClickCol3 = document.getElementsByClassName("boxesCol3");
 
 
 
-
+//tells if the gameboard is completely filled
 function isBoardFull(){
     let isBoardFull = true;
     for(let i = 0; i < gameBoard.length; i++){
@@ -33,7 +33,7 @@ function isBoardFull(){
 
 
 
-
+//wipes all current data on board
 function resetGame(){
     gameBoard = [
         [0,0,0],
@@ -43,6 +43,7 @@ function resetGame(){
 
     playerTurn = 1;
 
+    //making x's and o's invisible once game is reset
     document.getElementById("x00").style.display = "none";
     document.getElementById("o00").style.display = "none";
     document.getElementById("x01").style.display = "none";
@@ -89,6 +90,7 @@ document.getElementById("oC32").style.display = "none";
 
 
 
+//tells who won the game based on the winning combinations first position
 function whoWon(position){
     if(position == 1){
         alert("X's won");
@@ -99,8 +101,8 @@ function whoWon(position){
 
 }
 
-// logic for checking if the game is won
-// need to replace the alert with reseting the game board most likely going to add a reset function that happens when button is clicked 
+
+// logic for checking if the game is won, checks to see if any winning line is filled by the same value (x or o)
 
 function checkWin(){
     if(gameBoard[0][0] == gameBoard[1][0] && gameBoard[1][0] == gameBoard[2][0] && gameBoard[0][0] != 0){
@@ -134,14 +136,12 @@ function checkWin(){
     }
 
 }
-//end of checking if game is won
 
 
 
 
-function gameRun(){
-    
-    
+//calls all functions and runs the game, adds all click functions
+function gameRun(){ 
         for (let i = 0; i < boxClickCol1.length; i++) {
             boxClickCol1[i].addEventListener("click", function () {
                 if(gameBoard[i][0] == 0){
@@ -149,7 +149,7 @@ function gameRun(){
                         gameBoard[i][0] = 1;
                         console.log(gameBoard);
                         playerTurn = 2;
-                        checkWin();
+                        
                         if(i == 0){
                             document.getElementById("x00").style.display = "block"; // univisibles everything
                         }else if(i == 1){
@@ -157,6 +157,7 @@ function gameRun(){
                         }else if(i == 2){
                             document.getElementById("x02").style.display = "block";
                         }
+                        checkWin();
                     }else if(playerTurn == 2){
                         gameBoard[i][0] = 2;
                         console.log(gameBoard);
@@ -169,6 +170,7 @@ function gameRun(){
                         }else if(i == 2){
                             document.getElementById("o02").style.display = "block";
                         }
+                        checkWin();
                     }
                 }else{
                     console.log("There is already a value here");
@@ -193,6 +195,7 @@ function gameRun(){
                         }else if(i == 2){
                             document.getElementById("x30").style.display = "block";
                         }
+                        checkWin();
                     }else if(playerTurn == 2){
                         gameBoard[i][1] = 2;
                         console.log(gameBoard);
@@ -205,6 +208,7 @@ function gameRun(){
                         }else if(i == 2){
                             document.getElementById("o30").style.display = "block";
                         }
+                        checkWin();
                     }
                 }else{
                     console.log("There is already a value here");
@@ -229,6 +233,7 @@ function gameRun(){
                         }else if(i == 2){
                             document.getElementById("xC32").style.display = "block";
                         }
+                        checkWin();
                     }else if(playerTurn == 2){
                         gameBoard[i][2] = 2; 
                         console.log(gameBoard);
@@ -241,6 +246,7 @@ function gameRun(){
                         }else if(i == 2){
                             document.getElementById("oC32").style.display = "block";
                         }
+                        checkWin();
                     }
                 }else{
                     console.log("There is already a value here");
@@ -254,7 +260,7 @@ function gameRun(){
 
 
    
-
+    //logic for reset button
     let resetButton = document.getElementById("reset");
     resetButton.addEventListener("click", function(){
         resetGame();
@@ -263,9 +269,8 @@ function gameRun(){
 
 
 
-    //console.log(boxClickCol1[0].getBoundingClientRect());
 
-
+//runs game
 gameRun();
 
 
